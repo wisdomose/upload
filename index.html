@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UIkit</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+	<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+	<link rel="stylesheet" type="text/css" href="./index.css">
+</head>
+<body onload="warnMe();">
+	<form onsubmit=" event.preventDefault(), submitHandler();" autocomplete = "off">
+		<textarea type="text" id="question" placeholder="question"></textarea><br>
+		<input type="text" id="optionA" placeholder="optionA"><br>
+		<input type="text" id="optionB" placeholder="optionB"><br>
+		<input type="text" id="optionC" placeholder="optionC"><br>
+		<input type="text" id="optionD" placeholder="optionD"><br>
+		<input type="text" id="optionE" placeholder="optionE"><br>
+		<input type="text" id="answer" placeholder="answer"><br>
+		<input type="submit" name="submit" value="submit">
+	</form>
+
+
+
+<script>
+	// Initialize Firebase
+	firebase.initializeApp({
+		apiKey: "AIzaSyDWpSOr_MO-NIN4pnYPmObskarhdZQrG_c",
+		authDomain: "ebahs-f1db9.firebaseapp.com",
+		projectId: "ebahs-f1db9"
+	});
+	const db = firebase.firestore();
+</script>
+
+	<script type="text/javascript" src="./index.js"></script>
+</body>
+</html>
