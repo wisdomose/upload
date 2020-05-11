@@ -87,23 +87,30 @@
 
 
 
-
+function capitalize(str){
+	let temp = str.toLowerCase();
+	let perm = temp.charAt(0).toUpperCase() + temp.slice(1);
+	return perm
+}
 
 function submitHandler(){
+	let staff = capitalize(document.querySelector("#staffName").value);
+	let subject = document.querySelector("#subject").value;
 	let obj = {
-	question : document.querySelector("#question").value,
-    answer : document.querySelector("#answer").value,
-    optionA : document.querySelector("#optionA").value,
-    optionB : document.querySelector("#optionB").value,
-    optionC : document.querySelector("#optionC").value,
-    optionD : document.querySelector("#optionD").value,
-    optionE : document.querySelector("#optionE").value,
+    question : capitalize(document.querySelector("#question").value),
+    optionA : capitalize(document.querySelector("#optionA").value),
+    optionB : capitalize(document.querySelector("#optionB").value),
+    optionC : capitalize(document.querySelector("#optionC").value),
+    optionD : capitalize(document.querySelector("#optionD").value),
+    optionE : capitalize(document.querySelector("#optionE").value),
+    answer : capitalize(document.querySelector("#answer").value),
+    staff : capitalize(document.querySelector("#staffName").value),
     date : Date.now()
 	}
 
-	let res = confirm("please look through your work and confirm you want to submit");
+	let res = confirm(`please ${staff} look through your work and confirm you want to submit this ${subject} question`);
 	if(res){
-		db.collection("biology").add(obj)
+		db.collection(subject).add(obj)
 		.then(function(docRef) {
 		    return(docRef.id);})
 		.then( (id)=>{
@@ -122,10 +129,5 @@ function submitHandler(){
     	document.querySelector("#optionE").value = "";
 	}else{
 		return false;
-	}
-	
-}
-
-function warnMe(){
-	alert("you are currently working on BIOLOGY notify OSE to change the subject for you if you want a change")
+	}	
 }

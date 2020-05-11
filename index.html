@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Ebenezer Bells Academy</title>
+	<title>UIkit</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 	<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
-	<link rel="stylesheet" type="text/css" href="./index.css">
+	
 </head>
-<body onload="warnMe();">
-	<form onsubmit=" event.preventDefault(), submitHandler();" autocomplete = "off">
+<body>
+	<form onsubmit=" event.preventDefault(), submitHandler();" autocomplete="off">
+		<div id="subject-parent">
+			<label for="subject">Select the subject you want to upload</label>
+		<select id="subject">
+			<option value = "biology">Biology</option>
+			<option value = "chemistry">Chemistry</option>
+			<option value = "basic science">Basic Science</option>
+			<option value = "english junior secondary">English Language junior Secondary</option>
+			<option value = "english senior secondary">English Language Senior Secondary</option>
+			<option value = "economics">Economics</option>
+			<option value = "basic Technology">Basic Technology</option>
+		</select>
+		</div>
+		<input type="text" id="staffName" placeholder="who is uploading? (enter your name with your title miss, mrs, mr)" required />
+
 		<textarea type="text" id="question" placeholder="question"></textarea><br>
-		<input type="text" id="optionA" placeholder="optionA"><br>
-		<input type="text" id="optionB" placeholder="optionB"><br>
-		<input type="text" id="optionC" placeholder="optionC"><br>
-		<input type="text" id="optionD" placeholder="optionD"><br>
-		<input type="text" id="optionE" placeholder="optionE"><br>
-		<input type="text" id="answer" placeholder="answer"><br>
+		<input type="text" id="optionA" placeholder="optionA" required/><br>
+		<input type="text" id="optionB" placeholder="optionB" required/><br>
+		<input type="text" id="optionC" placeholder="optionC" required/><br>
+		<input type="text" id="optionD" placeholder="optionD" required/><br>
+		<input type="text" id="optionE" placeholder="optionE" required/><br>
+		<input type="text" id="answer" placeholder="answer" required/><br>
 		<input type="submit" name="submit" value="submit">
 	</form>
 
@@ -32,5 +46,6 @@
 </script>
 
 	<script type="text/javascript" src="./index.js"></script>
+	<link rel="stylesheet" type="text/css" href="./index.css">
 </body>
 </html>
