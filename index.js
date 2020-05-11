@@ -103,7 +103,7 @@ function submitHandler(){
 
 	let res = confirm("please look through your work and confirm you want to submit");
 	if(res){
-		db.collection("basic science").add(obj)
+		db.collection("biology").add(obj)
 		.then(function(docRef) {
 		    return(docRef.id);})
 		.then( (id)=>{
