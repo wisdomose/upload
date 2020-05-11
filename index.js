@@ -127,5 +127,5 @@ function submitHandler(){
 }
 
 function warnMe(){
-	alert("you are currently working on BASIC SCIENCE notify OSE to change the subject for you")
+	alert("you are currently working on BIOLOGY notify OSE to change the subject for you if you want a change")
 }
