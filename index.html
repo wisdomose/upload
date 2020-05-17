@@ -10,20 +10,27 @@
 <body>
 	<form onsubmit=" event.preventDefault(), submitHandler();" autocomplete="off">
 		<div id="subject-parent">
-			<label for="subject">Select the subject you want to upload</label>
+           <label for="id">ID</label>
+                <input id="id" type="number" placeholder="this value is unique and increments"/>
+           <label for="class">Class you want to work on</label>
+                <select id="class">
+                        <option value = "primary">Primary</option>
+                        <option value = "junior secondary">Junior Secondary</option>
+                        <option value = "senior secondary">Senior Secondary</option>
+		</select>
+           <label for="subject">Select the subject you want to upload</label>
 		<select id="subject">
+                        <option value = "agric">Agricultural Science</option>
                         <option value = "basic science">Basic Science</option>
                         <option value = "basic Technology">Basic Technology</option>
                         <option value = "biology">Biology</option>
+                        <option value = "civic">Civic Education</option>
 			<option value = "chemistry">Chemistry</option>
                         <option value = "economics">Economics</option>
-                        <option value = "primary english">English Language Primary School</option>
-			<option value = "english junior secondary">English Language Junior Secondary</option>
-			<option value = "english senior secondary">English Language Senior Secondary</option>
-			<option value = "primary mathematics">Mathematics Primary School</option>
-			<option value = "mathematics junior secondary">Mathematics Junior Secondary</option>
-			<option value = "mathematics senior secondary">Mathematics Senior Secondary</option>
-			
+			<option value = "english">English Language</option>
+                        <option value = "fmath">Further Mathematics</option>
+			<option value = "mathematics">Mathematics</option>
+                        <option value = "physics">Physics</option>
 		</select>
 		</div>
 		<input type="text" id="staffName" placeholder="who is uploading? (enter your name with your title miss, mrs, mr)" required />
