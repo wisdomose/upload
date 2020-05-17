@@ -96,8 +96,10 @@ function capitalize(str){
 function submitHandler(){
 	let staff = capitalize(document.querySelector("#staffName").value);
 	let subject = document.querySelector("#subject").value;
-        let class = document.querySelector("#class").value
+        let class = document.querySelector("#class").value;
+        let id = document.querySelector("#id").value;
 	let obj = {
+    id:id,
     question : capitalize(document.querySelector("#question").value),
     optionA : capitalize(document.querySelector("#optionA").value),
     optionB : capitalize(document.querySelector("#optionB").value),
